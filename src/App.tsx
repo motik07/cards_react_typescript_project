@@ -18,6 +18,7 @@ import SearchProvider from "./context/SearchContext";
 import AdminPanel from "./components/AdminControl";
 import EditCard from "./components/EditCard";
 import Header from "./components/Header";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 function App() {
 
@@ -36,10 +37,22 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/new-card" element={<NewCard />} />
               <Route path="/about" element={<About />} />
-              <Route path="/favorite-cards" element={<FavoriteCards />} />
+              <Route path="/favorite-cards" element={
+                <ProtectedRoute>
+                  <FavoriteCards />
+                </ProtectedRoute>
+              } />
               <Route path="/my-cards" element={<MyCards />} />
-              <Route path="/admin-panel" element={<AdminPanel />} />
-              <Route path="/edit-card/:id" element={<EditCard />} />
+              <Route path="/admin-panel" element={
+                <ProtectedRoute>
+                  <AdminPanel />
+                </ProtectedRoute>
+              } />
+              <Route path="/edit-card/:id" element={
+                <ProtectedRoute>
+                  <EditCard />
+                </ProtectedRoute>
+              } />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
             <Footer />
