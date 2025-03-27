@@ -1,54 +1,117 @@
-# React + TypeScript + Vite
+# Cards React TypeScript Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for managing and displaying cards with user authentication and admin controls. Built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### User Management
+- User registration and login system
+- JWT-based authentication
+- Protected routes for authenticated users
+- User profile management
+- Admin control panel for user management
 
-## Expanding the ESLint configuration
+### Card Management
+- Create new cards with rich content
+- Edit existing cards
+- Delete cards with confirmation modal
+- View all cards
+- Personal card collection (MyCards)
+- Favorite cards functionality
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### UI/UX Features
+- Responsive design using Bootstrap and React Bootstrap
+- Dark/Light theme toggle
+- Animated transitions using Framer Motion
+- Form validation using Formik and Yup
+- Toast notifications for user feedback
+- Loading states and animations
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Admin Features
+- User CRM system
+- User role management
+- Card management controls
+- System monitoring
+
+## Tech Stack
+
+- **Frontend Framework:** React 19
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** 
+  - Bootstrap 5
+  - React Bootstrap
+  - CSS Modules
+- **Form Management:** Formik with Yup validation
+- **Routing:** React Router DOM
+- **HTTP Client:** Axios
+- **Animations:** Framer Motion
+- **State Management:** React Context
+- **Authentication:** JWT
+
+## Project Structure
+
+```
+src/
+├── assets/         # Static assets (images, icons)
+├── components/     # React components
+│   ├── cards/     # Card-related components
+│   └── loader/    # Loading components
+├── context/       # React context providers
+├── interfaces/    # TypeScript interfaces
+├── services/      # API services
+├── style/         # Global styles
+└── utilities/     # Helper functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
 ```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create a `.env` file in the root directory and add your environment variables:
+```
+VITE_API_URL=your_api_url
+```
+
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
