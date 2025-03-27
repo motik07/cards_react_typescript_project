@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { User } from '../../interfaces/users_interfaces/User';
 import { UserLogin } from '../../interfaces/users_interfaces/UserLogin';
 import { alertError } from '../../utilities/toastify_utilities/Toastify';
@@ -28,7 +28,7 @@ export const registerUser = async (normalizedUserArg: User) => {
   
   export const getUserById = async (id: string) => {
     try {
-      let response = await axios.get(`${API}/${id}`, { headers: { "x-auth-token": sessionStorage.getItem("token") }});
+      const response = await axios.get(`${API}/${id}`, { headers: { "x-auth-token": sessionStorage.getItem("token") }});
       return response.data;
     } catch (error) {
       console.error(`ERROR - file: UserServices.ts mission: fetch get card by id - getUserById() ${error}`);
@@ -36,4 +36,41 @@ export const registerUser = async (normalizedUserArg: User) => {
     }
   };
   
-  
+  export const getAllUsers: () => Promise<User[]>  = async () => {
+    try {
+      const response = await axios.get(API, { headers: { "x-auth-token": sessionStorage.getItem("token") }});
+      return response.data;
+    } catch (error) {
+      console.error("Error GET ALL USERS: UserService.ts getAllUsers() error:", error);
+      alertError(`Error GET ALL USERS: UserService.ts getAllUsers() error: ${error}`);
+      throw error;
+    }
+  }
+
+  export const updateUser = async (id: string, userData: Partial<User>): Promise<User> => {
+    try {
+      const response = await axios.put(`${API}/${id}`, userData, { 
+        headers: { "x-auth-token": sessionStorage.getItem("token") }
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Error UPDATE USER: UserService.ts updateUser() error:", error);
+      console.error((error as AxiosError).response)
+      alertError(`Error UPDATE USER: UserService.ts updateUser() error: ${error}`);
+      throw error;
+    }
+  }
+
+  export const patchUserBusiness = async (id: string): Promise<User> => {
+    try {
+      const response = await axios.patch(`${API}/${id}`, null , { 
+        headers: { "x-auth-token": sessionStorage.getItem("token") }
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Error PATCH USER BUSINESS: UserService.ts patchUserBusiness() error:", error);
+      alertError(`Error PATCH USER BUSINESS: UserService.ts patchUserBusiness() error: ${error}`);
+      throw error;
+    }
+  }
+

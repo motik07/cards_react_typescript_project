@@ -16,7 +16,9 @@ import MyCards from "./components/MyCards";
 import { ThemeProvider } from "./context/ThemeContext";
 import SearchProvider from "./context/SearchContext";
 import AdminPanel from "./components/AdminControl";
+import UserCrm from "./components/UserCrm";
 import EditCard from "./components/EditCard";
+import EditUser from "./components/EditUser";
 import Header from "./components/Header";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
@@ -48,9 +50,19 @@ function App() {
                   <AdminPanel />
                 </ProtectedRoute>
               } />
+              <Route path="/user-crm" element={
+                <ProtectedRoute>
+                  <UserCrm />
+                </ProtectedRoute>
+              } />
               <Route path="/edit-card/:id" element={
                 <ProtectedRoute>
                   <EditCard />
+                </ProtectedRoute>
+              } />
+              <Route path="/edit-user/:id" element={
+                <ProtectedRoute>
+                  <EditUser />
                 </ProtectedRoute>
               } />
               <Route path="*" element={<PageNotFound />} />

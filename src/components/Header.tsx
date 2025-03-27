@@ -77,6 +77,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
               {decodedToken && (decodedToken.isAdmin || decodedToken.isBusiness) && <NavLink className="nav-link fw-bold py-1 px-2 active head-baloon-font nav-links-style text-light" to={"my-cards"}>MY-CARDS</NavLink>}
               {(decodedToken?.isAdmin || decodedToken?.isBusiness) && <NavLink className="nav-link fw-bold py-1 px-2 active head-baloon-font nav-links-style text-light" to={"/new-card"}>NEW-CARD</NavLink>}
               {decodedToken && decodedToken.isAdmin && <NavLink className="nav-link fw-bold py-1 px-2 active head-baloon-font nav-links-style text-warning" to={"admin-panel"}>ADMIN-CONTROL</NavLink>}
+              {decodedToken && decodedToken.isAdmin && <NavLink className="nav-link fw-bold py-1 px-2 active head-baloon-font nav-links-style text-warning" to={"user-crm"}>USER-CRM</NavLink>}
             </div>
           </div>
         ) : (

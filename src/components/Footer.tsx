@@ -1,4 +1,3 @@
-
 import "../style/NavBar.css";
 import { FunctionComponent, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
@@ -54,6 +53,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
               {decodedToken && (decodedToken.isAdmin || decodedToken.isBusiness) && <NavLink className="nav-link fw-bold py-1 px-2 active head-baloon-font nav-links-style text-light" to={"my-cards"}>MY-CARDS</NavLink>}
               {(decodedToken?.isAdmin || decodedToken?.isBusiness) && <NavLink className="nav-link fw-bold py-1 px-2 active head-baloon-font nav-links-style text-light" to={"/new-card"}>NEW-CARD</NavLink>}
               {decodedToken && decodedToken.isAdmin && <NavLink className="nav-link fw-bold py-1 px-2 active head-baloon-font nav-links-style text-warning" to={"admin-panel"}>ADMIN-CONTROL</NavLink>}
+              {decodedToken && decodedToken.isAdmin && <NavLink className="nav-link fw-bold py-1 px-2 active head-baloon-font nav-links-style text-warning" to={"user-crm"}>USER-CRM</NavLink>}
           </div>
         ) : (
           <div  className={`d-flex overflow-hidden rounded ${theme === "dark" ? "navbar-dark theme-dark" : "navbar-light theme-light"}`}>
