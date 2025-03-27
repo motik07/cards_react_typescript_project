@@ -1,0 +1,30 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css";
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "https://fonts.cdnfonts.com/css/vintage-capital";
+@import "https://fonts.cdnfonts.com/css/rounds-black";
+@import 'https://fonts.cdnfonts.com/css/david-libre';
+@import "https://fonts.cdnfonts.com/css/diary-santa";
+@import "https://fonts.cdnfonts.com/css/barthez";
+
+.headline-font-width {
+  font-family: "Vintage Capital", Calibri !important;
+}
+
+.head-baloon-font {
+  font-family: "Rounds Black", Calibri !important;
+}
+
+.david-liber-font {
+  font-family: 'David Libre', Calibri !important;
+}
+
+.diary-santa-font {
+  font-family: "Diary Santa", Calibri !important;
+}
+
+.headline-first-char-style-font {
+  font-family: "Barthez", Calibri !important;
+}
+.s{
+  background-color: rgba(137, 43, 226, 0.45);
+}

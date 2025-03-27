@@ -1,0 +1,19 @@
+.card-light {
+  background-color: rgb(255, 199, 120) !important;
+  color: #000000 !important;
+}
+
+.card-dark {
+  background: radial-gradient(circle, #360334 0%, #21002b 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 2px 3px 7px 0px rgb(52, 52, 52) !important;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

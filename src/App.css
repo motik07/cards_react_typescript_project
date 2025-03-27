@@ -1,0 +1,84 @@
+* {
+  font-family: "Lucida Sans Unicode", Calibri, sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.theme-light {
+  background-color: rgb(220, 140, 100) !important;
+  color: #000000 !important;
+}
+
+.theme-dark {
+  background-color: #1b0023 !important;
+  color: #ffffff !important;
+  box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.213) !important;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 1px rgb(0 0 0) !important;
+}
+
+.box-shadow {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.732) !important;
+}
+
+.alertDark-toast-style {
+  font-family: "David Libre", Calibri !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  direction: rtl; /*^ hebrew */
+}
+
+.tell-toast-style {
+  font-family: "David Libre", Calibri !important;
+  background-color: rgba(255, 242, 0, 0.536) !important;
+  color: rgb(141, 0, 0) !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  display: flex !important;
+  text-align: center !important;
+  direction: rtl; /*^ hebrew */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2px !important;
+}
+
+.bb {
+  border: 2px solid black;
+}
+
+body.light {
+  background-color: rgb(222, 179, 146) !important;
+  color: #000000 !important;
+}
+
+body.dark {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.form-dark {
+  background-color: rgb(220, 162, 100) !important;
+}
+
+.form-light {
+  background-color: rgb(35, 17, 41) !important;
+  box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.131) !important;
+  color: #ffffff;
+}

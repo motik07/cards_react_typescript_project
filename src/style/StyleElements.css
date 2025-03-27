@@ -1,0 +1,29 @@
+.element-hover {
+  transition: all 0.3s ease;
+}
+
+.element-hover:hover {
+  transform: scale(1.01);
+  text-shadow: 0 4px 15px rgb(167, 0, 0);
+}
+
+.animated-image {
+  width: 200px;
+  animation: shake 10s infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
