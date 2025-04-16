@@ -56,25 +56,6 @@ const Cards: FunctionComponent<CardProps> = () => {
   };
 
   return (
-    // <div className="container-fluid">
-    //   {isLoading ? (
-    //     <div className="d-flex justify-content-center mt-5">
-    //       <Loader />
-    //     </div>
-    //   ) : displayedCards.length === 0 ? (
-    //     <div className="d-flex justify-content-center mt-5">
-    //       <h2 className="text-danger text-shadow">No matches found!</h2>
-    //     </div>
-    //   ) : (
-    //     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 p-3">
-    //       {displayedCards.map((card: CardInterface) => (
-    //         <div key={card._id} className="col d-flex justify-content-center">
-    //           <Bcards card={card} likeCard={likeCard}  />
-    //         </div>
-    //       ))}
-    //     </div>
-    //   )}
-    // </div>
     <div className="container-fluid">
       {isLoading ? (
         <div className="d-flex justify-content-center mt-5">
